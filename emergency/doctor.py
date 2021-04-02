@@ -1,6 +1,7 @@
 from emergency.staff_member import StaffMember
 from emergency.adult import Adult
 from emergency.child import Child
+from emergency.patient import Patient
 import numpy as np
 
 
@@ -8,18 +9,18 @@ class Doctor(StaffMember):
     def __init__(self,  first_name, last_name, presonal_id, age, licence_number):
         super(Doctor, self).__init__(first_name, last_name, presonal_id, age, licence_number)
 
-    @staticmethod
-    def generate_report():
-        report = {
-                "Total ratio of recovered COVID patients": None,
-                "Ratio of COVID recovered children": None,
-                "Ratio of COVID recovered senior citizens (above 65)": None
-                  }
-        return report
-
-    @staticmethod
-    def generate_final_report():
-        return {}
+    # @staticmethod
+    # def generate_report(patients:list[Patient]):
+    #     report = {
+    #             "Total ratio of recovered COVID patients": None,
+    #             "Ratio of COVID recovered children": None,
+    #             "Ratio of COVID recovered senior citizens (above 65)": None
+    #               }
+    #     return report
+    #
+    # @staticmethod
+    # def generate_final_report():
+    #     return {}
 
     @staticmethod
     def give_treatment(patients):

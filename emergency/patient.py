@@ -7,6 +7,6 @@ class Patient(Person):
         self.diag = None
         self.requires_isolation = False
 
-    # # @personal_data.setter
+    # @personal_data.setter
     # def personal_data(self, val):
     #     pass

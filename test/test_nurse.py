@@ -33,3 +33,8 @@ def test_test_covid():
             p.diag == "Negative"
 
 
+def test_personal_data():
+    n = Nurse("Joanne", "Dark", 123456, 25, "N22222")
+    print(n.personal_data)
+    assert n.personal_data == {'first_name': 'Joanne', 'last_name': 'Dark', 'presonal_id': 123456, 'age': 25, 'licence_number': 'N22222'}
+    assert 'licence_number' in list(n.personal_data.keys())
