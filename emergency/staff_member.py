@@ -12,5 +12,6 @@ class StaffMember(Person):
         self._personal_data = {"first_name": first_name, "last_name": last_name,
                                "presonal_id": presonal_id, "age": age, "licence_number": licence_number}
     @abstractmethod
-    def generate_report(self):
+    @staticmethod
+    def generate_report():
         pass
